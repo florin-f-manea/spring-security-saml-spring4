@@ -13,7 +13,7 @@ Several classes were using deprecated (and finally removed) method **getFilterPr
 
 ##The Solution
 
-Added two classes (just to define the mising methods and intercept initialization of required string to be returned by **getFilterProcessesUrl()** and changed the above mentioned classes tyo inherit from these ones
+Added two classes (just to define the mising methods and intercept initialization of required string to be returned by **getFilterProcessesUrl()**) and changed the above mentioned classes tyo inherit from these ones
 
 ```java
 package org.springframework.security.saml;
@@ -58,7 +58,7 @@ Changes required to existing projects:
 * Schema reference in security context XML files should reflect the latest version
 * Some attributes were removed (like *access-denied-page* in *http* element)
 * Add \<security:csrf disabled="true"/\> in *http* elements
-* Change existing http elements setting use-expressions="false" or switch to expressions in access atribute values (like replacing deprecated IS_AUTHENTICATED_FULLY with expression based "authenticated"
+* Change existing http elements setting use-expressions="false" or switch to expressions in access atribute values (like replacing IS_AUTHENTICATED_FULLY with expression based "authenticated")
 * Specify obsolete values for password/username ( j_*) POST parameters for forms authentication or change login jsp acordingly
 
 ```xml
@@ -81,6 +81,7 @@ Changes required to existing projects:
         <security:custom-filter before="FIRST" ref="metadataGeneratorFilter"/>
         
         <!--security:access-denied-handler error-page="/saml/web/metadata/login" /-->
+        <security:csrf disabled="true"/>
     </security:http>
 
     <!-- Secured pages with SAML as entry point -->
