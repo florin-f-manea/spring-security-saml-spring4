@@ -51,7 +51,7 @@ import java.util.List;
  *
  * @author Vladimir Schäfer
  */
-public class SAMLLogoutProcessingFilter extends LogoutFilter {
+public class SAMLLogoutProcessingFilter extends LogoutFilter4 {
 
     protected SAMLProcessor processor;
     protected SingleLogoutProfile logoutProfile;

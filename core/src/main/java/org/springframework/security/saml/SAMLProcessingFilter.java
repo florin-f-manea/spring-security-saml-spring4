@@ -40,7 +40,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Vladimir Schäfer
  */
-public class SAMLProcessingFilter extends AbstractAuthenticationProcessingFilter {
+public class SAMLProcessingFilter extends AbstractAuthenticationProcessingFilter4 {
 
     protected final static Logger logger = LoggerFactory.getLogger(SAMLProcessingFilter.class);
 

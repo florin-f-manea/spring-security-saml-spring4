@@ -50,7 +50,7 @@ import java.io.IOException;
  *
  * @author Vladimir Schäfer
  */
-public class SAMLLogoutFilter extends LogoutFilter {
+public class SAMLLogoutFilter extends LogoutFilter4 {
 
     protected SingleLogoutProfile profile;
     protected SAMLLogger samlLogger;
